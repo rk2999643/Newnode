@@ -22,7 +22,7 @@ const express = require("express")
 const dummydata = require("./dummydata")
 const route = require("./router/userrouter");
 const productrouting = require("./router/ProductRouting");
-
+const validate = require("./middleware/userMiddleware.")
 const app = express();
 const arr = []
 app.use(express.json())
@@ -45,6 +45,7 @@ app.post("/login",(req,res)=>{
 })
 app.use("/user",route)
 app.use("/productroute",productrouting)
+app.use(validate)
 
 app.listen(5000,()=>{
     console.log("Server is running Fine");
