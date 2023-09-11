@@ -2,9 +2,9 @@
   "name": "node_h123",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "handson2.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon handson2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

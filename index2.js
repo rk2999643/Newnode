@@ -20,6 +20,8 @@
 
 const express = require("express")
 const dummydata = require("./dummydata")
+const route = require("./router/userrouter");
+const productrouting = require("./router/ProductRouting");
 
 const app = express();
 const arr = []
@@ -41,6 +43,8 @@ app.post("/login",(req,res)=>{
     res.send(arr)
 
 })
+app.use("/user",route)
+app.use("/productroute",productrouting)
 
 app.listen(5000,()=>{
     console.log("Server is running Fine");
